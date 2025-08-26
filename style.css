@@ -130,16 +130,15 @@ header .navbar {
     color: var(--primary-color);
 }
 
-.hero-section {
-    min-height: 100vh;
-    background: var(--primary-color);
-}
-
-.navr :where(#menu-close-button, #menu-open-button) {
+.navbar :where(#menu-close-button, #menu-open-button) {
     display: none;
 }
 
 /* Hero section  styling*/
+.hero-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
 
 .hero-section .section-content {
     display: flex;
@@ -627,6 +626,8 @@ header .navbar {
 
 /* Responsive media query code for max width 640px */
 @media screen and (max-width: 640px) {
+
+
     .menu-section .menu-list {
         gap: 60px;
     }

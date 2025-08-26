@@ -1,18 +1,21 @@
-const navLink = document.querySelectorAll(".nav-menu .nav-link");
+// const navLink = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 
 // Open menu when the open button is clicked
-menuOpenButton.addEventListener("click", () =>
-    document.body.classList.add("show-mobile-menu"));
+menuOpenButton.addEventListener("click", () => {
+    document.body.classList.toggle("show-mobile-menu");
+});
 
 // Close menu when the close button is clicked
-menuCloseButton.addEventListener("click", () => document.body.classList.remove("show-mobile-menu"));
+menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 
 // Close menu when the nav Link is clicked
-navLink.forEach(link => {
-    link.addEventListener("click", () => document.body.classList.remove("show-mobile-menu"));
-})
+// navLink.forEach(link => {
+//     link.addEventListener("click", () => {
+//         document.body.classList.toggle("show-mobile-menu");
+//     });
+// });
 
 const swiper = new Swiper('.slider-wrapper', {
 
