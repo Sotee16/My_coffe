@@ -670,3 +670,19 @@ header .navbar {
     }
 
 }
+
+@supports (-webkit-touch-callout: none) {
+  /* Styles here will ONLY apply on iOS Safari */
+  .nav-menu {
+    height: 100vh; /* full screen height fix */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #menu-open-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10000;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
